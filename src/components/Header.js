@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {FaBars} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
-const Header = ({ current ,setuser}) => {
+const Header = ({ current ,user,setuser}) => {
     const [open,setopen] = useState(false)
     const data = JSON.parse(localStorage.getItem('data'))
     const logout=()=>{
@@ -13,9 +13,9 @@ const Header = ({ current ,setuser}) => {
         
             <div style={{ alignItems:'center' , minWidth: '100%', minHeight: '15vh', backgroundColor: 'gold', color: 'black', display: 'flex', justifyContent: 'space-between', fontSize: '30px' }}>
                 <span>
-                    <span onClick={()=>setopen(!open)}>
+                    {user?<span onClick={()=>setopen(!open)}>
                     <FaBars/>
-                    </span>
+                    </span>:''}
                     Fake Reservation</span>
                 <span>{current}</span>
                 <div>

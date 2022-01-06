@@ -26,7 +26,7 @@ const Login = ({user,setuser}) => {
     if (redirect) return <Navigate to='/plan' />
     return (
         <>
-            <Header current={'Login'} />
+            <Header current={'Login'} user={user}/>
             <div style={{fontSize:'40px'}}><b>You need to Login to access the site</b></div>
             <div className='formContainer'>
                 
@@ -36,7 +36,7 @@ const Login = ({user,setuser}) => {
 
                     <input type='email' name='email' onChange={handleChange} placeholder={'enter your email'} required />
                     <div className="label">Password:</div>
-                    <input type='password' name='password' onChange={handleChange} placeholder={'enter your password'}  minLength={8} required />
+                    <input type='password' name='password' onChange={handleChange} placeholder={'enter your password'} required />
                     <Link to={'/register'} >Create account ?</Link>
                     <Link to={'/reset-password'} >  Forgot password ?</Link>
                     <input type='submit' />

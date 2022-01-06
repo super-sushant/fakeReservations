@@ -31,7 +31,7 @@ const Register = ({user,setuser}) => {
     }
     return (
         <>
-      <Header current={'Register'} />
+      <Header current={'Register'} user={user}/>
 
             <div className='formContainer'>
                 <form onSubmit={handleSubmit} className='grid'>
@@ -40,9 +40,9 @@ const Register = ({user,setuser}) => {
 
                     <input type='email' name='email' onChange={handleChange} placeholder={'Enter your email'} required />
                     <div className="label">Password:</div>
-                    <input type='password' name='password' onChange={handleChange} placeholder={'Enter your password'} minLength={8} required />
+                    <input type='password' name='password' onChange={handleChange} placeholder={'Enter your password'} required />
                     <div className="label">Confirm Password:</div>
-                    <input type='password' name='password2' onChange={handleChange} placeholder={'Enter your password'} minLength={8} required />
+                    <input type='password' name='password2' onChange={handleChange} placeholder={'Enter your password'} required />
                     <div className="label">Phone Number:</div>
                     <input type='number' name='phone' onChange={handleChange} placeholder={'Enter your Phone No.'} minLength={7} min={1000000} required />
                     <div>Already have an account ?

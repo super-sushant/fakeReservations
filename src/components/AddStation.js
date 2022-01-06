@@ -24,7 +24,7 @@ const AddStation =({user,setuser})=>{
     if(redirect) return <Navigate to='/dashboard' />
     return(
         <>
-            <Header current={'Add Stations'} setuser={setuser}/>
+            <Header current={'Add Stations'} user={user} setuser={setuser}/>
 
         <div className='formContainer'>
                 

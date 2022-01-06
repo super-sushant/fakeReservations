@@ -103,6 +103,14 @@
       "password2": "12121212",
       "phone": "2364672",
       "id": 5
+    },
+    {
+      "email": "admin@fake.com",
+      "password": "$2a$10$6tzBQ89aP0dUd5cgD4UBFOB19ErmO1IDTzQL.T504P51mfISEh6KS",
+      "password2": "admin",
+      "phone": "1212121",
+      "admin": true,
+      "id": 6
     }
   ]
 }

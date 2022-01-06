@@ -30,7 +30,7 @@ const PlanJourney=({user,setuser})=>{
     if(redirect) return <Navigate to='/dashboard' />
     return(
         <>
-      <Header current={'Plan Journey'}  setuser={setuser}/>
+      <Header current={'Plan Journey'} user={user} setuser={setuser}/>
 
             <div className='formContainer'>
                 <form onSubmit={handleSubmit} className='grid' >

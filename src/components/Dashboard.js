@@ -16,7 +16,7 @@ const Dashboard = ({ user, setuser }) => {
     if (!user) return <Navigate to='/' />
     return (
         <>
-            <Header current={'Dashboard'} setuser={setuser} />
+            <Header current={'Dashboard'} user={user}setuser={setuser} />
             <div style={{ fontSize: '30px', fontWeight: 'bold' }}>   Journey History</div>
             {data ? data.map(data => <Card data={data} handleDelete={handleDelete} />) : ''}
         </>
