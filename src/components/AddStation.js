@@ -22,6 +22,8 @@ const AddStation =({user,setuser})=>{
     }
     // if(!JSON.parse(localStorage.getItem('data')).user.admin) setredirect(true)
     if(redirect) return <Navigate to='/dashboard' />
+    if(!user) return <Navigate to='/' />
+    
     return(
         <>
             <Header current={'Add Stations'} user={user} setuser={setuser}/>
