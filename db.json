@@ -1,0 +1,64 @@
+{
+  "stations": [
+    "delhi",
+    "agra",
+    "gurgaon"
+  ],
+  "reservations": [
+    {
+      "to": "gurgaon",
+      "from": "agra",
+      "user": 4,
+      "date": "2022-01-28",
+      "seats": "20",
+      "id": 1
+    },
+    {
+      "to": "gurgaon",
+      "from": "agra",
+      "user": 3,
+      "date": "2022-01-28",
+      "seats": "20",
+      "id": 3
+    },
+    {
+      "to": "gurgaon",
+      "from": "agra",
+      "user": 3,
+      "date": "2022-01-27",
+      "seats": "11",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "email": "djkhfk@dfj.in",
+      "password": "$2a$10$jEZdEGcX7XalHlT7yokYk.c9XEBB8GiuEdgHrMUSWWPhphCSZGYM2",
+      "password2": "111111111",
+      "phone": "2893782298",
+      "id": 1
+    },
+    {
+      "email": "sahd@sd.in",
+      "password": "$2a$10$1GBEM3RhQLKx0igZw/jSy.jSFAjyd94yDCuU/iD6tlNVsrymulJ.O",
+      "password2": "12121212",
+      "phone": "1212121212",
+      "id": 2
+    },
+    {
+      "email": "as@as.as",
+      "password": "$2a$10$XYGLDI0zMrZNKITwp1bPzOVtQwBlPS7YeU.sZ65J8hw4LK5k05v.W",
+      "password2": "12121212",
+      "phone": "1232112212",
+      "id": 3,
+      "admin": true
+    },
+    {
+      "email": "a@a.a",
+      "password": "$2a$10$zdQbs5N9hhWPJK9YgObTeu7Coycr1PN0Phid43/4.AxJmyf/f9avG",
+      "password2": "12121212",
+      "phone": "12121212",
+      "id": 4
+    }
+  ]
+}

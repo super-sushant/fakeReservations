@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.label{
+
+  
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  }
+
+input , select{
+
+
+  padding:10px; 
+  width:75%;
+  margin:20px;
+  margin-top: 10px;
+ font-size: 20px;
+ 
+ 
+ }
+.grid{
+  width:400px;
+  margin: auto;
+  padding-top: 20px;
+  border: 2px solid grey;
+  opacity: 80%;
+  background-color: aquamarine;
+}
+ input:active, input:focus{
+ transition: 1s;
+ border:2px solid blue;
+ outline:none;
+ }
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 4px solid skyblue ;
+  width:80%;
+  margin: auto;
+  box-shadow: slategray;
+  border-radius: 10px;
+  margin-block:20px;
+  padding: 50px
+}
+.formContainer{
+  background-image:url('./bgimg.jpg');
+  height:100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ input[type="submit"]{
+ 
+  transition: 1s;
+  width:70%;
+  margin-top: 30px;
+  color:white;
+ border:none;
+ outline:none;
+ background-color: blue;
+ font-size: 20px;
+ font-weight: 600;
+ 
+ 
+ }
+ .open{
+   justify-content: left;
+   display: flex;
+   flex-direction: column;
+   margin-left:0px;
+  width:25%;
+  max-width: 50%;
+  position :absolute;
+
+ }
+ .linkbox{
+  border: 2px solid Black ;
+  border-top: none;
+  padding: 10px;
+  background-color: aquamarine;
+
+ }
+ .closed{
+   display: none;
+ }
+ @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .grid{
+    width: 100%;
+  }
+}

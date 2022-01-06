@@ -1,10 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './components/Login';
+import {Routes,Route} from 'react-router-dom'
+import Register from './components/Register';
+import PlanJourney from './components/PlanJourney';
+import Dashboard from './components/Dashboard';
+import { useState } from 'react';
 
 function App() {
+  const data= JSON.parse(localStorage.getItem('data'))
+  const [user,setuser]= useState(data?data.user.id:0)
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" style={{backgroundImage:'bgimg.png'}}>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +26,13 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Routes >
+        <Route exact path='/' element={<Login user={user} setuser={setuser}/>} />
+        <Route exact path='/register' element ={<Register user={user} setuser={setuser}/>}/>
+        <Route exact path='/plan' element ={<PlanJourney user={user} setuser={setuser}/>}/>
+        <Route exact path='/dashboard' element ={ <Dashboard user={user} setuser={setuser}/>} />
+      </Routes>
     </div>
   );
 }
