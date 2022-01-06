@@ -7,12 +7,6 @@ const Login = ({user,setuser}) => {
 
     const [formdata, setformdata] = useState({ email: '', password: '', })
     const [redirect, setredirect] = useState(false)
-
-    const {
-        email,
-        password,
-    } = formdata;
-
     const handleChange = (e) => {
         setformdata({ ...formdata, [e.target.name]: e.target.value })
     }
@@ -24,10 +18,6 @@ const Login = ({user,setuser}) => {
             .catch(err => alert(JSON.stringify(err)))
             .then(res => {localStorage.setItem('data',JSON.stringify(res.data));setuser(res.data.user.id)})
             .then(setredirect(true))
-    }
-    const passRef = useRef();
-    const handleClick = () => {
-        passRef.current.type = "password"
     }
     console.log(user)
     if (user) {
@@ -46,7 +36,7 @@ const Login = ({user,setuser}) => {
 
                     <input type='email' name='email' onChange={handleChange} placeholder={'enter your email'} required />
                     <div className="label">Password:</div>
-                    <input type='password' name='password' onChange={handleChange} placeholder={'enter your password'} ref={passRef} minLength={8} required />
+                    <input type='password' name='password' onChange={handleChange} placeholder={'enter your password'}  minLength={8} required />
                     <Link to={'/register'} >Create account ?</Link>
                     <Link to={'/reset-password'} >  Forgot password ?</Link>
                     <input type='submit' />

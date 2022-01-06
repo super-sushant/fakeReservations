@@ -17,7 +17,7 @@ const Register = ({user,setuser}) => {
         }else{
             axios.post(process.env.REACT_APP_API+'register',formdata)
             .then(res=>{localStorage.setItem('data',JSON.stringify(res.data));setuser(res.data.user.id)})
-            // .then(setredirect(true))
+            .then(setredirect(true))
             
         }
         // Submit to backend API with Axios/fetch 
@@ -25,10 +25,6 @@ const Register = ({user,setuser}) => {
 
     }
    
-    const passRef = useRef();
-    const handleClick = () => {
-        passRef.current.type = "password"
-    }
     if(redirect) return <Navigate to='/plan' />
     if(user){
         return <Navigate to='/dashboard' />
