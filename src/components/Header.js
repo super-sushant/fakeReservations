@@ -38,7 +38,7 @@ const Header = ({ current ,setuser}) => {
 
                 </div>
                 <div className='linkbox'>
-                <Link to='/plan' >Plan a Journey</Link>
+                    {data?data.user.admin?(<Link to='/addstation' >Add a new Station</Link>):(<Link to='/plan' >Plan a Journey</Link>):''}
 
                 </div>
             </div>

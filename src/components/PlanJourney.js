@@ -25,6 +25,7 @@ const PlanJourney=({user,setuser})=>{
             alert('Please Select the stations correctly')
         }
     }
+    if(JSON.parse(localStorage.getItem('data'))) if(JSON.parse(localStorage.getItem('data')).user.admin) setredirect(true)
     if(!user) return <Navigate to='/' />
     if(redirect) return <Navigate to='/dashboard' />
     return(
@@ -37,13 +38,13 @@ const PlanJourney=({user,setuser})=>{
                     <div className="label">To:</div>
 
                     <select name='to'  onChange={handleChange} >
-                    {loading ? <option>Loading...</option> : (hasError ? <div>Error occured.</div> : (response.map(data => <option value={data}>{data}</option>)))}
+                    {loading ? <option>Loading...</option> : (hasError ? <div>Error occured.</div> : (response.map(data => <option value={data.name}>{data.name}</option>)))}
                     </select>
 
                     <div className="label">From:</div>
 
                     <select name='from' onChange={handleChange} required>
-                    {loading ? <option>Loading...</option> : (hasError ? <div>Error occured.</div> : (response.map(data => <option value={data}>{data}</option>)))}
+                    {loading ? <option>Loading...</option> : (hasError ? <div>Error occured.</div> : (response.map(data => <option value={data.name}>{data.name}</option>)))}
                     </select>
                     <div className="label">Select the Date:</div>
                     <input type='date' name='date' onChange={handleChange} placeholder={'Select a date'} min={new Date().toISOString().split("T")[0]} required />

@@ -5,7 +5,7 @@ import Card from './Card';
 import axios from 'axios';
 const Dashboard = ({ user, setuser }) => {
     const [data, setdata] = useState(null)
-    useEffect((user) => {
+    useEffect(() => {
         axios.get(process.env.REACT_APP_API + 'reservations'+(JSON.parse(localStorage.getItem('data')).user.admin?'':('?user='+user)))
         .then(res => setdata(res.data))
     }, [])

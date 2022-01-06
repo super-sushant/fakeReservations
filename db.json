@@ -1,8 +1,21 @@
 {
   "stations": [
-    "delhi",
-    "agra",
-    "gurgaon"
+    {
+      "name": "delhi",
+      "id": 1
+    },
+    {
+      "name": "agra",
+      "id": 2
+    },
+    {
+      "name": "gurgaon",
+      "id": 3
+    },
+    {
+      "name": "agartala",
+      "id": 4
+    }
   ],
   "reservations": [
     {
@@ -28,6 +41,30 @@
       "date": "2022-01-27",
       "seats": "11",
       "id": 4
+    },
+    {
+      "to": "agra",
+      "from": "gurgaon",
+      "user": 4,
+      "date": "2022-01-20",
+      "seats": "16",
+      "id": 5
+    },
+    {
+      "to": "delhi",
+      "from": "agra",
+      "user": 5,
+      "date": "2022-01-29",
+      "seats": "22",
+      "id": 6
+    },
+    {
+      "to": "gurgaon",
+      "from": "agra",
+      "user": 4,
+      "date": "2022-01-29",
+      "seats": "19",
+      "id": 7
     }
   ],
   "users": [
@@ -59,6 +96,13 @@
       "password2": "12121212",
       "phone": "12121212",
       "id": 4
+    },
+    {
+      "email": "a@aa.aaa",
+      "password": "$2a$10$lLURhVbOXxICo9JhMRD.Z.jUi7DFSKn45RfKbLZWhTC8.ex3vcCta",
+      "password2": "12121212",
+      "phone": "2364672",
+      "id": 5
     }
   ]
 }

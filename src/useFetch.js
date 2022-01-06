@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React,{useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 function useFetch(url, opts) {
     const [response, setResponse] = useState(null)
     const [loading, setLoading] = useState(true)

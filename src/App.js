@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Login from './components/Login';
 import {Routes,Route} from 'react-router-dom'
 import Register from './components/Register';
 import PlanJourney from './components/PlanJourney';
 import Dashboard from './components/Dashboard';
+import AddStation from './components/AddStation';
 import { useState } from 'react';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/register' element ={<Register user={user} setuser={setuser}/>}/>
         <Route exact path='/plan' element ={<PlanJourney user={user} setuser={setuser}/>}/>
         <Route exact path='/dashboard' element ={ <Dashboard user={user} setuser={setuser}/>} />
+        <Route exact path='/addstation' element ={ <AddStation user={user} setuser={setuser}/>} />
       </Routes>
     </div>
   );

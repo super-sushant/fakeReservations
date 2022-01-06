@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import {Link,Navigate} from 'react-router-dom'
 import axios from 'axios'
 import Header from './Header';
@@ -12,7 +12,7 @@ const Register = ({user,setuser}) => {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        if(formdata.password!=formdata.password2){
+        if(formdata.password!==formdata.password2){
             alert('Passwords Did not match please Check')
         }else{
             axios.post(process.env.REACT_APP_API+'register',formdata)
